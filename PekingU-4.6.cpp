@@ -9,8 +9,8 @@ class Complex
     double real, imag;
     public:
         Complex(double r=0, double i=0):real(r), imag(i){};
-        ostream& operator <<(ostream& os, const Complex& c);
-        istream& operator >>(istream& is, Complex& c);
+        ostream& operator <<(ostream& os, const Complex& c); // 请你仔细品一下这个参数的顺序问题
+        istream& operator >>(istream& is, Complex& c);  // 决定了 流运算符不能是某个类的成员变量
 };
 
 ostream& Complex::operator <<(ostream& os)
